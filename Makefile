@@ -4,8 +4,8 @@ main: main.o caesar.o vigenere.o decrypt.o
 test-ascii: test-ascii-main.o test-ascii.o
 	g++ -o test-ascii test-ascii-main.o test-ascii.o
 
-tests: tests.o funcs.o
-	g++ -o tests tests.o funcs.o
+tests: tests.o caesar.o vigenere.o decrypt.o
+	g++ -o tests tests.o caesar.o vigenere.o decrypt.o
 
 test-ascii.o: test-ascii.cpp test-ascii.h
 
